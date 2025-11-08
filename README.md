@@ -1,33 +1,47 @@
 # KampüsPost
 
-Bu proje React Native kullanılarak geliştirilmiş temel bir giriş ekranı uygulamasıdır.
-
-## Proje Klasör Yapısı
-![Proje Yapısı](./screenshots/project-structure.png)
-
-## Uygulama Başlangıç Ekranı
-![Başlangıç](./screenshots/welcome-screen.png)
-
-## Giriş Ekranı
-![Giriş](./screenshots/login-screen.png)
-
-## Giriş Formu
-![Form](./screenshots/login-form.png)
-
-## Konsol Kaydı
-![Konsol](./screenshots/console-log.png)
-
-## Emülatörde Çalışma
-![Emülatör](./screenshots/emulator-run.png)
-
-## GitHub Deposu
-![Repo](./screenshots/github-repo.png)
+React Native ile geliştirilmiş basit bir giriş ekranı uygulaması.
 
 ---
 
-### ✨ Kullanılan Teknolojiler
+## Proje Klasör Görünümü
+![Proje Yapısı](./screenshoots/resim7.png)
+
+---
+
+## Hoş Geldiniz Ekranı
+![Hoş Geldiniz](./screenshoots/resim6.png)
+
+---
+
+## Giriş Ekranı
+![Giriş](./screenshoots/resim5.png)
+
+---
+
+## Giriş Formu (E-posta & Şifre Alanları)
+![Form](./screenshoots/resim4.png)
+
+---
+
+## Konsola Yazdırma (Giriş Yap Butonu)
+![Konsol Kayıt](./screenshoots/resim3.png)
+
+---
+
+## Uygulamanın Çalışma Görüntüsü (Emülatör)
+![Emülatör](./screenshoots/resim2.png)
+
+---
+
+## GitHub Repository Görünümü
+![Repo](./screenshoots/resim1.png)
+
+---
+
+### Kullanılan Teknolojiler
 - React Native
-- JavaScript / TypeScript
+- TypeScript / JavaScript
 - Android Emulator
 
 ---
