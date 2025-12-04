@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CustomInput from './CustomInput';
 
-export default function LoginScreen() {
+type Props = {
+  navigation: any; // basit tuttuk, tip kasmadık
+};
+
+const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    console.log('E-posta:', email);
-    console.log('Şifre:', password);
+    // Şimdilik kontrol yok, direkt Home'a yönlendiriyoruz
+    navigation.navigate('Home');
+  };
+
+  const handleGoRegister = () => {
+    navigation.navigate('Register');
   };
 
   return (
@@ -25,41 +33,58 @@ export default function LoginScreen() {
         placeholder="Şifre"
         value={password}
         onChangeText={setPassword}
-        secureTextEntry={true}
+        secureTextEntry
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Giriş Yap</Text>
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+        <Text style={styles.loginButtonText}>Giriş Yap</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.registerButton} onPress={handleGoRegister}>
+        <Text style={styles.registerButtonText}>Kayıt Ol</Text>
       </TouchableOpacity>
     </View>
   );
-}
+};
+
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 16,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-    padding: 20,
+    backgroundColor: '#fff',
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '600',
-    marginBottom: 40,
-    color: '#333',
-  },
-  button: {
-    width: '90%',
-    backgroundColor: '#4A90E2',
-    paddingVertical: 12,
-    borderRadius: 8,
-    marginTop: 10,
-  },
-  buttonText: {
+    marginBottom: 24,
     textAlign: 'center',
-    fontSize: 18,
+  },
+  loginButton: {
+    backgroundColor: '#2979FF',
+    paddingVertical: 12,
+    borderRadius: 6,
+    marginTop: 12,
+  },
+  loginButtonText: {
     color: '#fff',
-    fontWeight: '600',
+    textAlign: 'center',
+    fontWeight: '500',
+    fontSize: 16,
+  },
+  registerButton: {
+    marginTop: 8,
+    paddingVertical: 10,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#2979FF',
+  },
+  registerButtonText: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#2979FF',
+    fontWeight: '500',
   },
 });
